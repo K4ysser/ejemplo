@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content-header %}
+<section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Estudiante</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item active">Estudiante</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+{% endblock %}
+
+{% block content-body %}
+  <div class="row">
+    <div class="col-md-4">
+       <div class="card card-primary">
+           <div class="card-header">
+               <span>Crear estudiante</span>
+           </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12">
+                      <div class="form-group">
+                         <label>Nombres</label>
+                          <input type="text" name="nombre" class="form-control" required>
+                       </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                         <label>Apellidos</label>
+                          <input type="text" name="apellido" class="form-control" required>
+                       </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                         <label>Estado</label>
+                          <select class="form-control">
+                            <option value=""  selected disabled>Seleccione opcion</option>
+                            <option value="1" >Habilitado</option>
+                            <option value="0" >Desahabilitado</option>
+                          </select>
+                       </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                       </div>
+                    </div>
+                </div>
+              </div>
+       </div>
+     </div>
+    <div class="col-md-8">
+      <div class="card card-primary">
+             <div class="card-header">
+               <span>Lista de estudiantes</span>
+             </div>
+             <div class="card-body"> 
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+               <td>nombre 01</td>
+               <td>apellido 01</td>
+               <td>estado 01</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+             </div>
+      </div>
+    </div>
+ </div>
+{% endblock %}
+
